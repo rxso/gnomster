@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails_12factor', group: :production
 
+#add pages to results 
+gem 'will_paginate', '~> 3.1', '>= 3.1.5'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.9'
 # Use postgresql as the database for Active Record
