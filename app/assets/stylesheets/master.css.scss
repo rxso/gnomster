@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  background: url('/assets/graffiti-pic.jpg');
+  background: url('/assets/seigaiha.png');
   font-family: "Brandon Printed", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
   color: #e30074;
 }
@@ -37,4 +37,8 @@ p {
   background-color: #000000;
   border-radius: 0px;
   box-shadow: 0px 1px 3px #2a2a2a;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #e30074;
 }
