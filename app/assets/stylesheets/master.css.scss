@@ -17,3 +17,24 @@ h1, h2, h3, h4, h5, h6 {
   margin:0;
   padding:0;
 }
+
+body {
+  background: url('/assets/graffiti-pic.jpg');
+  font-family: "Brandon Printed", "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  color: #e30074;
+}
+
+h5 {
+  font-family: HelveticaNeue-Light, "Arial", "san-serif";
+}
+
+p {
+  font-family: TisaPro, "Georgia", "serif";
+}
+
+.navbar.navbar-inverse {
+  //background:url('/assets/triad.png');
+  background-color: #000000;
+  border-radius: 0px;
+  box-shadow: 0px 1px 3px #2a2a2a;
+}
