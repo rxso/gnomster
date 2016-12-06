@@ -2,8 +2,11 @@ source 'https://rubygems.org'
 
 gem 'rails_12factor', group: :production
 
-#add pages to results 
+#add pages to results
 gem 'will_paginate', '~> 3.1', '>= 3.1.5'
+
+#add a simple form for submitting places
+gem 'simple_form'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.9'
