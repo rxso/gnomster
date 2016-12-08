@@ -8,6 +8,9 @@ gem 'will_paginate', '~> 3.1', '>= 3.1.5'
 #add a simple form for submitting places
 gem 'simple_form'
 
+#add authentication to the site, specify later version to avoid Heroku issue
+gem 'devise','>= 3.2.4'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.9'
 # Use postgresql as the database for Active Record
