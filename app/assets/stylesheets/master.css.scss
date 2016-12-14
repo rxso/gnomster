@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC');
 @import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -26,17 +27,18 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   background: url('/assets/pw_pattern.png');
-  font-family: "Passion One", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif",
+  font-family: "Varela Round", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif",
   Georgia, serif;
   color: #020202;
 }
 
 h1 {
   color: #000000;
+  font-family: "Passion One", "Helvetica", "san-serif";
 }
 
 h5 {
-  font-family: "Varela Round", "Arial", "san-serif";
+  font-family: "Fredoka One", "Arial", "san-serif";
   color: #e30074;
 }
 
@@ -54,6 +56,7 @@ p {
 
 .navbar-inverse .navbar-brand {
   color: #000000;
+  font-family: "Fredoka One";
 }
 
 .pages a {
