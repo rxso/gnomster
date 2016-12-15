@@ -3,4 +3,7 @@
   <h5><%= @place.address %></h5>
   <br /><br />
   <p><%= @place.description %></p>
+  <div class="pull-right">
+    <%= link_to "Edit", edit_place_path(@place), class: "btn btn-success" %>
+  </div>
 </div>
