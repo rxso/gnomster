@@ -1,9 +1,10 @@
-<div class="booyah-box col-xs-8 col-xs-offset-2">
+<div class="booyah-box col-xs-6 col-xs-offset-3">
   <h1><%= @place.name %></h1>
   <h5><%= @place.address %></h5>
   <br /><br />
   <p><%= @place.description %></p>
   <div class="pull-right">
-    <%= link_to "Edit", edit_place_path(@place), class: "btn btn-success" %>
+    <%= link_to "", edit_place_path(@place), class: "glyphicon glyphicon-pencil" %>
+    <%= link_to "", place_path(@place), method: :delete, data: {confirm: "Warning: Delete This Gnomster Forever?"}, class: "glyphicon glyphicon-trash" %>
   </div>
 </div>
