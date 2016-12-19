@@ -8,6 +8,12 @@ gem 'will_paginate', '~> 3.1', '>= 3.1.5'
 #add a simple form for submitting places
 gem 'simple_form'
 
+#add mapping tools
+gem 'geocoder', '1.3.4'
+
+#add Bing API key to ENV
+gem 'figaro', '>= 1.0.0'
+
 #add authentication to the site, specify later version to avoid Heroku issue
 gem 'devise','>= 3.2.4'
 
