@@ -4,7 +4,9 @@
   <br /><br />
   <p><%= @place.description %></p>
   <div class="pull-right">
-    <%= link_to "", edit_place_path(@place), class: "glyphicon glyphicon-pencil" %>
-    <%= link_to "", place_path(@place), method: :delete, data: {confirm: "Warning: Delete This Gnomster Forever?"}, class: "glyphicon glyphicon-trash" %>
+    <% if current_user && current_user == @place.user %>
+      <%= link_to "", edit_place_path(@place), class: "glyphicon glyphicon-pencil" %>
+    <% end %>
+  <%= link_to "", place_path(@place), method: :delete, data: {confirm: "Warning: Delete This Gnomster Forever?"}, class: "glyphicon glyphicon-trash" %>
   </div>
 </div>
