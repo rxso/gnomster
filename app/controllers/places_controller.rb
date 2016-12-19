@@ -27,10 +27,11 @@ class PlacesController < ApplicationController
   end
 
   def update
+    @place = Place.find(params[:id])
     if @place.user != current_user
       return render text: '403: Sorry You Cannot Update This Page', status: :forbidden
     end
-    @place = Place.find(params[:id])
+
     @place.update_attributes(place_params)
     redirect_to root_path
   end
