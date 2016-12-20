@@ -12,7 +12,7 @@
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
   box-shadow: 1px 1px 2px 0 #d0d0d0;
-  background: #f2f3f4;
+  background: #fbfbf4;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   margin-top: 10px;
@@ -25,8 +25,9 @@ h1, h2, h3, h4, h5, h6 {
   padding:0;
 }
 
+
 body {
-  background: url('/assets/pw_pattern.png');
+  background: url('/assets/satinweave.png');
   font-family: "Varela Round", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif",
   Georgia, serif;
   color: #020202;
@@ -34,33 +35,39 @@ body {
 
 h1 {
   font-family: "Passion One", "Helvetica", "san-serif";
-  color: #e30074;
+  color: #ff004d;
 }
 
 h5 {
   font-family: "Fredoka One", "Arial", "san-serif";
-  color: #e30074;
+  color: #ffc125;
 }
 
 p {
   font-family: "Bitter", "Georgia", "serif";
-  color: #088da5;
+  color: #b2d8d8;
 }
 
 .navbar.navbar-inverse {
   //background:url('/assets/triad.png');
-  background-color: #e30074;
+  background-color: #ff004d;
   border-radius: 0px;
   box-shadow: 0px 1px 3px #2a2a2a;
 }
 
 .navbar-inverse .navbar-brand {
-  color: #000000;
+  color: #fbfbf4;
   font-family: "Fredoka One";
 }
 
+.navbar-link {
+  color: #000000;
+}
+
+
+
 .pages a {
-  color: #e30074;
+  color: #ff004d;
   text-decoration: none;
 }
 
@@ -84,37 +91,59 @@ p {
 }
 
 .glyphicon.glyphicon-remove {
-  color: #e30074;
+  color: #ff004d;
 }
 
 .glyphicon.glyphicon-ok {
-  color: #e30074;
+  color: #ff004d;
 }
 
 .glyphicon.glyphicon-comment {
-  color: #e30074;
+  color: #ff004d;
 }
 
 .glyphicon.glyphicon-trash {
-  color: #e30074;
+  color: #ff004d;
 }
 
 .glyphicon.glyphicon-pencil {
-  color: #e30074;
+  color: #ff004d;
 }
 
 .title {
-  color: #e30074;
+  color: #ff004d;
   &:hover {
-    color: #088da5;
+    color: #27546e;
   }
 }
 
 .btn.btn-success {
-  background-color: #e30074;
+  background-color: #ff004d;
   border: none;
 }
 
-.navbar-link {
-  color: #088da5;
+.comment-color {
+  color: #b2d8d8;
+}
+
+
+
+blockquote {
+  background: #fbfbf4;
+  border-left: 10px solid #ffc125;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+blockquote:before {
+  color: #ff004d;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
 }
