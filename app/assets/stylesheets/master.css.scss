@@ -44,7 +44,7 @@ h5 {
 
 p {
   font-family: "Bitter", "Georgia", "serif";
-  color: #86becb;
+  color: #088da5;
 }
 
 .navbar.navbar-inverse {
@@ -106,11 +106,15 @@ p {
 .title {
   color: #e30074;
   &:hover {
-    color: #468499;
+    color: #088da5;
   }
 }
 
 .btn.btn-success {
   background-color: #e30074;
   border: none;
+}
+
+.navbar-link {
+  color: #088da5;
 }
