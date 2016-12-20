@@ -33,8 +33,8 @@ body {
 }
 
 h1 {
-  color: #000000;
   font-family: "Passion One", "Helvetica", "san-serif";
+  color: #e30074;
 }
 
 h5 {
@@ -77,4 +77,40 @@ p {
 
 .clear {
   clear: both;
+}
+
+.glyphicon {
+  font-size: 24px;
+}
+
+.glyphicon.glyphicon-remove {
+  color: #e30074;
+}
+
+.glyphicon.glyphicon-ok {
+  color: #e30074;
+}
+
+.glyphicon.glyphicon-comment {
+  color: #e30074;
+}
+
+.glyphicon.glyphicon-trash {
+  color: #e30074;
+}
+
+.glyphicon.glyphicon-pencil {
+  color: #e30074;
+}
+
+.title {
+  color: #e30074;
+  &:hover {
+    color: #468499;
+  }
+}
+
+.btn.btn-success {
+  background-color: #e30074;
+  border: none;
 }

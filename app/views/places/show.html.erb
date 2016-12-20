@@ -1,7 +1,7 @@
 <div class="booyah-box col-xs-6 col-xs-offset-3">
   <h1><%= @place.name %></h1>
   <h5><%= @place.address %></h5>
-  <br /><br />
+  <br />
   <p><%= @place.description %></p>
 
 <% if @place.latitude.present? && @place.longitude.present? %>
@@ -40,17 +40,43 @@
 <div class="clear"></div>
   <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
     <%= f.input :message %>
-    <%= f.input :rating %>
-    <%= f.submit "Comment", class: "glyphicon glyphicon-comment" %>
-  <% end %>
+    <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
+
+    <%= f.submit "Submit", class: "btn btn-success" %>
+  <% end %><!-- Button trigger modal -->
+<button class="glyphicon glyphicon-comment" data-toggle="modal" data-target="#myModal">
+
+</button>
+
+<!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Review This Gnomster:</h4>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button class="glyphicon glyphicon-remove" data-dismiss="modal"></button>
+          <button class="glyphicon glyphicon-ok"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <h1>Reviews</h1>
   <% @place.comments.each do |comment| %>
     <div>
       <blockquote>
-        <b><%= comment.rating %></b> -
+        <% if comment.ux_interface_rating.present? %>
+          <b><%= comment.ux_interface_rating %></b> -
+        <% end %>
           <%= comment.message %>
           <small><%= comment.user.email %></small>
       </blockquote>
     </div>
-    <% end %>
+  <% end %>
