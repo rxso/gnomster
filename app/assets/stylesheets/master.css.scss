@@ -40,7 +40,7 @@ h1 {
 
 h5 {
   font-family: "Fredoka One", "Arial", "san-serif";
-  color: #ffc125;
+  color: #FFBA0C;
 }
 
 p {
@@ -64,11 +64,21 @@ a {
   font-family: "Fredoka One";
 }
 
+.navbar-inverse .navbar-nav>li>a {
+    color: #ffffff !important;
+}
+
 .navbar-link {
   color: #000000;
 }
 
+.nav.navbar-nav.navbar-right {
+  color: #ffffff;
+}
 
+.navbar-brand {
+  font-size: 30px;
+}
 
 .pages a {
   color: #ff004d;
@@ -114,6 +124,10 @@ a {
   color: #ff004d;
 }
 
+.glyphicon.glyphicon-user {
+  font-size: 30px
+}
+
 .title {
   color: #ff004d;
   &:hover {
@@ -134,7 +148,7 @@ a {
 
 blockquote {
   background: #fbfbf4;
-  border-left: 10px solid #ffc125;
+  border-left: 10px solid #FFBA0C;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
@@ -142,7 +156,7 @@ blockquote {
 blockquote:before {
   color: #ff004d;
   content: open-quote;
-  font-size: 4em;
+  font-size: 3em;
   line-height: 0.1em;
   margin-right: 0.25em;
   vertical-align: -0.4em;
