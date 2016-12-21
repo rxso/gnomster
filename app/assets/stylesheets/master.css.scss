@@ -35,12 +35,12 @@ body {
 
 h1 {
   font-family: "Passion One", "Helvetica", "san-serif";
-  color: #ff004d;
+  color: #ff0065;
 }
 
 h5 {
   font-family: "Fredoka One", "Arial", "san-serif";
-  color: #FFBA0C;
+  color: #ff0065;
 }
 
 p {
@@ -54,7 +54,7 @@ a {
 
 .navbar.navbar-inverse {
   //background:url('/assets/triad.png');
-  background-color: #ff004d;
+  background-color: #ff0065;
   border-radius: 0px;
   box-shadow: 0px 1px 3px #2a2a2a;
 }
@@ -81,7 +81,7 @@ a {
 }
 
 .pages a {
-  color: #ff004d;
+  color: #ff0065;
   text-decoration: none;
 }
 
@@ -105,23 +105,23 @@ a {
 }
 
 .glyphicon.glyphicon-remove {
-  color: #ff004d;
+  color: #ff0065;
 }
 
 .glyphicon.glyphicon-ok {
-  color: #ff004d;
+  color: #ff0065;
 }
 
 .glyphicon.glyphicon-comment {
-  color: #ff004d;
+  color: #ff0065;
 }
 
 .glyphicon.glyphicon-trash {
-  color: #ff004d;
+  color: #ff0065;
 }
 
 .glyphicon.glyphicon-pencil {
-  color: #ff004d;
+  color: #ff0065;
 }
 
 .glyphicon.glyphicon-user {
@@ -129,14 +129,14 @@ a {
 }
 
 .title {
-  color: #ff004d;
+  color: #ff0065;
   &:hover {
     color: #27546e;
   }
 }
 
 .btn.btn-success {
-  background-color: #ff004d;
+  background-color: #ff0065;
   border: none;
 }
 
@@ -148,13 +148,13 @@ a {
 
 blockquote {
   background: #fbfbf4;
-  border-left: 10px solid #FFBA0C;
+  border-left: 10px solid #ff0065;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
 blockquote:before {
-  color: #ff004d;
+  color: #ff0065;
   content: open-quote;
   font-size: 3em;
   line-height: 0.1em;
