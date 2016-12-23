@@ -14,3 +14,9 @@
 //=require bootstrap-sprockets
 //= require jquery_ujs
 //= require_tree .
+
+jQuery(function($) {
+  $('button.hamburger').click(function() {
+    $(this).toggleClass('is-active');
+  });
+});

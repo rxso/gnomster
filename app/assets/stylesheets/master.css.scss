@@ -168,6 +168,18 @@ a {
   color: #99cccc;
 }
 
+.hamburger:focus {
+    outline:none;
+}
+
+button.cleanview {
+  background-color: transparent;
+  border: none;
+}
+
+button.cleanview:hover {
+  color: #cc0050;
+}
 
 blockquote {
   background: #fbfbf4;
