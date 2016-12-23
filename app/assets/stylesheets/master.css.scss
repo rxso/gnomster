@@ -45,22 +45,23 @@ h5 {
 
 p {
   font-family: "Bitter", "Georgia", "serif";
-  color: #99cccc;
+  color: #044c65;
 }
 
-a {
-  color: #99cccc;
+a:hover {
+  color: #ffffff !important;
 }
 
 .navbar.navbar-inverse {
   //background:url('/assets/triad.png');
   background-color: #ff0065;
   border-radius: 0px;
-  box-shadow: 0px 1px 3px #2a2a2a;
+  border: none;
+  //box-shadow: 0px 1px 3px #2a2a2a;
 }
 
 .navbar-inverse .navbar-brand {
-  color: #fbfbf4;
+  color: #FFCC11;
   font-family: "Fredoka One";
 }
 
@@ -69,7 +70,7 @@ a {
 }
 
 .navbar-link {
-  color: #000000;
+  color: #ffffff;
 }
 
 .nav.navbar-nav.navbar-right {
@@ -135,13 +136,15 @@ a {
 .title {
   color: #ff0065;
   &:hover {
-    color: #cc0050;
+    color: #ffcc11;
+    text-decoration: none;
   }
 }
 
 .btn {
-    padding: 10px 16px;
+    padding: 12px 12px;
     border: 0 none;
+    border-radius: 50px;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -157,7 +160,7 @@ a {
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    background: #cc0050;
+    background: #ffcc11;
 }
 
 .btn-primary:active, .btn-primary.active {
@@ -165,20 +168,11 @@ a {
     box-shadow: none;
 }
 .comment-color {
-  color: #99cccc;
+  color: #044c65;
 }
 
 .hamburger:focus {
     outline:none;
-}
-
-button.cleanview {
-  background-color: transparent;
-  border: none;
-}
-
-button.cleanview:hover {
-  color: #cc0050;
 }
 
 blockquote {
@@ -200,4 +194,13 @@ blockquote:before {
 
 blockquote p {
   display: inline;
+}
+
+button.cleanview {
+  background-color: transparent;
+  border: none;
+}
+
+button.cleanview:hover {
+  color: #ffcc11;
 }
