@@ -1,3 +1,4 @@
+<!-- Place Heading -->
 <div class="booyah-box col-xs-6 col-xs-offset-3">
   <h1><%= @place.name %></h1>
   <h5><%= @place.address %></h5>
@@ -5,9 +6,7 @@
   <p><%= @place.description %></p>
   <br />
 
-
-
-<!-- Google Map Box -->
+<!-- Place Adress: Google Map Box -->
   <% if @place.latitude.present? && @place.longitude.present? %>
       <script>
         function initMap() {
@@ -28,18 +27,17 @@
       <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjpAd6FYwsO6x9nsy14J9T9LVu5Inao98&callback=initMap">
       </script>
-
     <div id="map"></div>
   <% end %>
 <br />
 
-<!--Photo Link -->
-<button class="glyphicon glyphicon-camera" data-toggle="modal" data-target="#myPhotoModal"></button>
+<!--Button Trigger Photo Modal -->
+<button type="button" class="glyphicon glyphicon-camera" data-toggle="modal" data-target="#myPhotoModal"></button>
 
-<!--Comment Link -->
-<button class="glyphicon glyphicon-comment" data-toggle="modal" data-target="#myCommentModal"></button>
+<!--Button Trigger Comment Modal -->
+<button type="button" class="glyphicon glyphicon-comment" data-toggle="modal" data-target="#myCommentModal"></button>
 
-<!-- Edit Links -->
+<!-- Edit Individual Place Links -->
   <div class="pull-right">
       <% if current_user && current_user == @place.user %>
         <%= link_to "", edit_place_path(@place), class: "glyphicon glyphicon-pencil" %>
@@ -49,7 +47,7 @@
 </div>
 <div class="clear"></div>
 
-<!-- Comment Modal -->
+<!-- Place Comment Modal -->
   <div class="modal fade" id="myCommentModal" tabindex="-1" role="dialog" aria-labelledby="myCommentModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -63,15 +61,15 @@
             <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-success" data-dismiss="modal">Cancel</button>
-              <%= f.submit "Submit", class: "btn btn-success" %>
+            <button class="btn btn-primary" data-dismiss="modal">Cancel</button>
+              <%= f.submit "Submit", class: "btn btn-primary" %>
           </div>
       <% end %>
     </div>
   </div>
 </div>
 
-<!-- Photo Modal -->
+<!-- Place Photo Modal -->
   <div class="modal fade" id="myPhotoModal" tabindex="-1" role="dialog" aria-labelledby="myPhotoModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -84,28 +82,23 @@
             <%= f.input :caption %>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-success" data-dismiss="modal">Cancel</button>
-              <%= f.submit "Submit", class: "btn btn-success" %>
+            <button class="btn btn-primary" data-dismiss="modal">Cancel</button>
+              <%= f.submit "Submit", class: "btn btn-primary" %>
           </div>
           <% end %>
     </div>
   </div>
 </div>
 
-  <div class="col-xs-10 col-xs-offset-1">
+<div class="col-xs-10 col-xs-offset-1">
 
-
-  <h1 class="center">Reviews</h1>
-
-<!-- Button trigger modal -->
-
+<h1 class="pull-left">Reviews</h1>
 
   </div>
   <div class="clear"></div>
-
   </div>
 
-<!--Comment Box -->
+<!--Place Comment Box -->
 
   <div class="comment-color">
     <% @place.comments.each do |comment| %>
@@ -119,10 +112,5 @@
         </blockquote>
       </div>
     <% end %>
-  <!--Photo Box -->
-
   </div>
-
-
-
 </div>

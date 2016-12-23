@@ -135,19 +135,38 @@ a {
 .title {
   color: #ff0065;
   &:hover {
-    color: #27546e;
+    color: #cc0050;
   }
 }
 
-.btn.btn-success {
-  background-color: #ff0065;
-  border: none;
+.btn {
+    padding: 10px 16px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
+.btn-primary {
+    background: #ff0065;
+    color: #ffffff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #cc0050;
+}
+
+.btn-primary:active, .btn-primary.active {
+    background: none;
+    box-shadow: none;
+}
 .comment-color {
   color: #99cccc;
 }
-
 
 
 blockquote {
@@ -157,6 +176,7 @@ blockquote {
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
+
 blockquote:before {
   color: #ff0065;
   content: open-quote;

@@ -8,6 +8,9 @@ gem 'will_paginate', '~> 3.1', '>= 3.1.5'
 #add a simple form for submitting places
 gem 'simple_form'
 
+#add hamburger menu animation
+gem 'hamburgers'
+
 #add mapping tools
 gem 'geocoder', '1.3.4'
 
