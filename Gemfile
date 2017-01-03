@@ -11,6 +11,9 @@ gem 'simple_form'
 #add hamburger menu animation
 gem 'hamburgers'
 
+#add photo tools
+gem 'carrierwave', '~> 1.0'
+
 #add mapping tools
 gem 'geocoder', '1.3.4'
 
