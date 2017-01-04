@@ -2,6 +2,12 @@
   <div class="booyah-box col-xs-6 col-xs-offset-3">
     <h1><%= link_to place.name, place_path(place), :class =>"title" %></h1>
     <h5><%= place.address %></h5><br  /><br  />
+
+    <% @place.photos.each do |photo| %>
+      <%= image_tag photo.picture %>
+      <%= photo.caption %>
+    <% end %>
+
     <p><%= place.description %></p><br  />
 
     <% if place.user.present? %>
