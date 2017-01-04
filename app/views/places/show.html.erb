@@ -5,6 +5,12 @@
   <br />
   <p><%= @place.description %></p>
   <br />
+  
+  <% @place.photos.each do |photo| %>
+    <%= image_tag photo.picture %>
+    <%= photo.caption %>
+  <% end %>
+
 
 <!-- Place Adress: Google Map Box -->
   <% if @place.latitude.present? && @place.longitude.present? %>
