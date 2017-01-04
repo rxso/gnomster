@@ -4,7 +4,3 @@ class Model < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 end
-
-class Photo < ActiveRecord::Base
-  mount_uploader :picture, PictureUploader
-end
