@@ -20,3 +20,11 @@ jQuery(function($) {
     $(this).toggleClass('is-active');
   });
 });
+
+bootcards.init( {
+  offCanvasBackdrop : true,
+  offCanvasHideOnMainClick : true,
+  enableTabletPortraitMode : true,
+  disableRubberBanding : true,
+  disableBreakoutSelector : 'a.no-break-out'
+});

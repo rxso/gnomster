@@ -1,28 +1,46 @@
 <%= @places.each do |place| %>
-  <div class="booyah-box col-xs-6 col-xs-offset-3">
-    <h1><%= link_to place.name, place_path(place), :class =>"title" %></h1>
-    <h5><%= place.address %></h5><br  /><br  />
-    <p><%= place.description %></p><br  />
+<div class="col-xs-4 col-xs-offset-2">
+  <div class="card">
+    <div class="card-content">
+      <% if place.photos.last.picture.present? %>
+      <%= image_tag place.photos.last.picture, :class => "thumbnail center" %>
+      <% end %>
+      <br/>
+      <div class="clear"></div>
 
-    <% if place.user.present? %>
-      <small><%= place.user.email %></small>
-    <% end %>
+      <div class="text-center">
+        <h1><%= link_to place.name, place_path(place), :class =>"title center" %></h1>
+        <h5><%= place.address %></h5><br/>
+        <div class="text-left">
+          <p><%= place.description %></p><br/>
+        </div>
 
-    <% if place.comments.present? %>
-      <div class="col-xs-12">
-        <blockquote>
-          <% if place.comments.last.ux_interface_rating.present? %>
-            <b><%= place.comments.last.ux_interface_rating %></b> -
-          <% end %>
-            <%= place.comments.last.message %>
-            <small><%= place.comments.last.user.email %></small>
-        </blockquote>
       </div>
-    <% end %>
 
+      <!-- <% if place.user.present? %>
+      <small><%= place.user.email %></small>
+      <% end %> -->
+
+      <% if place.comments.present? %>
+
+      <blockquote>
+        <% if place.comments.last.ux_interface_rating.present? %>
+        <b><%= place.comments.last.ux_interface_rating %></b>
+        -
+        <% end %>
+        <%= place.comments.last.message %>
+        <small><%= place.comments.last.user.email %></small>
+      </blockquote>
+    </div>
+    <% end %>
   </div>
+</div>
+
+</div>
 <% end %>
 
 <div class="pages col-xs-6 col-xs-offset-3">
-  <%= will_paginate @places %>
+<%= will_paginate @places %>
+</div>
+
 </div>

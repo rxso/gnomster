@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Passion+One');
-@import url('https://fonts.googleapis.com/css?family=Varela+Round');
-@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC');
-@import url('https://fonts.googleapis.com/css?family=Bitter');
-@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
-
+@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css");
+@import url( 'https://fonts.googleapis.com/css?family=Passion+One');
+@import url( 'https://fonts.googleapis.com/css?family=Varela+Round');
+@import url( 'https://fonts.googleapis.com/css?family=Alegreya+Sans+SC');
+@import url( 'https://fonts.googleapis.com/css?family=Bitter');
+@import url( 'https://fonts.googleapis.com/css?family=Fredoka+One');
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -30,8 +30,7 @@ blockquote p {
 
 body {
   background: url('/assets/satinweave.png');
-  font-family: "Varela Round", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif",
-  Georgia, serif;
+  font-family: "Varela Round", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
   color: #020202;
 }
 
@@ -44,15 +43,24 @@ button.cleanview:hover {
   color: #ffcc11;
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-  margin:0;
-  padding:0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
   font-family: "Passion One", "Helvetica", "san-serif";
   color: #ff0065;
+}
+
+h3 {
+  font-family: "Bitter", "Helvetica", "san-serif";
+  color: #044c65;
 }
 
 h5 {
@@ -65,7 +73,6 @@ p {
   color: #044c65;
 }
 
-
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -76,38 +83,50 @@ p {
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 20px;
-  line-spacing: 0em;
+  line-spacing: 0;
 }
 
 .btn {
-    padding: 12px 12px;
-    border: 0 none;
-    border-radius: 50px;
-    font-weight: 700;
-    letter-spacing: .5px;
-    text-transform: uppercase;
+  padding: 12px;
+  border: 0 none;
+  border-radius: 50px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
-.btn:focus, .btn:active:focus, .btn.active:focus {
-    outline: 0 none;
+.btn.active:focus,
+.btn:active:focus,
+.btn:focus {
+  outline: 0 none;
 }
 
 .btn-primary {
-    background: #ff0065;
-    color: #ffffff;
+  background: #ff0065;
+  color: #ffffff;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    background: #ffcc11;
+.btn-primary.active,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover,
+.open > .dropdown-toggle.btn-primary {
+  background: #ffcc11;
 }
 
-.btn-primary:active, .btn-primary.active {
-    background: none;
-    box-shadow: none;
+.btn-primary.active,
+.btn-primary:active {
+  background: none;
+  box-shadow: none;
 }
 
 .clear {
   clear: both;
+}
+
+.center {
+  margin: auto;
+  width: 60%;
 }
 
 .comment-color {
@@ -139,7 +158,7 @@ p {
 }
 
 .glyphicon.glyphicon-user {
-  font-size: 30px
+  font-size: 30px;
 }
 
 .glyphicon.glyphicon-camera {
@@ -147,7 +166,7 @@ p {
 }
 
 .hamburger:focus {
-    outline:none;
+  outline: none;
 }
 
 .has-error {
@@ -160,7 +179,7 @@ p {
 .navbar.navbar-inverse {
   //background:url('/assets/triad.png');
   background-color: #ff0065;
-  border-radius: 0px;
+  border-radius: 0;
   border: none;
 }
 
@@ -169,12 +188,12 @@ p {
   font-family: "Fredoka One";
 }
 
-.navbar-inverse .navbar-nav>li>a {
-    color: #FFCC11 !important;
+.navbar-inverse .navbar-nav > li > a {
+  color: #FFCC11 !important;
 }
 
-.navbar-inverse .navbar-nav>li>a:hover {
-    color: #ffea9f !important;
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #ffea9f !important;
 }
 
 .navbar-link {
@@ -190,7 +209,7 @@ p {
 }
 
 .navbar-collapse {
-    border: none !important;
+  border: none !important;
 }
 
 #map {
@@ -204,8 +223,140 @@ p {
 
 .title {
   color: #ff0065;
+
   &:hover {
     color: #ffcc11;
     text-decoration: none;
   }
+}
+
+.thumbnail {
+  background: transparent;
+  border: 0 none;
+  box-shadow: none;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.thumbnail.img {
+  min-height: 30px;
+  height: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.card {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card {
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 1px;
+  background-clip: padding-box;
+  background: #fbfbf4;
+  padding: 25px;
+}
+
+.card span.card-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.card .card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.card .card-image img {
+  border-radius: 1px 1px 0 0;
+  background-clip: padding-box;
+  position: relative;
+  z-index: -1;
+}
+
+.card .card-image span.card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 16px;
+}
+
+.card .card-image span.card-icons {
+  position: absolute;
+  right: 0;
+  padding: 16px;
+}
+
+.card .card-image {
+  box-shadow: inset 0 -140px 100px -100px rgba(0,0,0,1);
+}
+
+.card .card-content {
+  padding: 16px;
+  border-radius: 0 0 2px 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+}
+
+.card .card-content p {
+  margin: 0;
+  color: inherit;
+}
+
+.card .card-content span.card-title {
+  line-height: 48px;
+}
+
+.card .card-action {
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  padding: 16px;
+}
+
+.card .card-action a {
+  color: #ffab40;
+  margin-right: 16px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.card .card-action a:hover {
+  color: #ffd8a6;
+  text-decoration: none;
+}
+
+.card .card-image span.card-icons ul {
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+}
+
+.card .card-image span.card-icons .nav > li > a span {
+  transition: 0.2s transform;
+}
+
+.card .card-image span.card-icons .nav > li > a:focus span,
+.card .card-image span.card-icons .nav > li > a:hover span {
+  transform: translate(0, -4px);
+}
+
+.card .card-image span.card-icons .nav > li > a:focus,
+.card .card-image span.card-icons .nav > li > a:hover {
+  background-color: transparent;
+}
+
+.card .card-action .label {
+  padding: 10px;
+  margin: -5px;
 }
