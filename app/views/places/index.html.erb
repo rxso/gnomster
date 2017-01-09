@@ -2,7 +2,7 @@
 <div class="col-xs-4 col-xs-offset-2">
   <div class="card">
     <div class="card-content">
-      <% if place.photos.last.picture.present? %>
+      <% if place.photos.last && place.photos.last.picture.present? %>
       <%= image_tag place.photos.last.picture, :class => "thumbnail center" %>
       <% end %>
       <br/>
