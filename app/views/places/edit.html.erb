@@ -1,10 +1,11 @@
 <div class="booyah-box col-xs-6 col-xs-offset-3">
-    <h1>Edit a Gnomster</h1>
-    <%= simple_form_for @place do |f| %>
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.input :description %>
-    <br/>
-    <%= f.submit 'Update', class: 'btn btn-primary' %>
-    <% end %>
+  <h1>Edit a Gnomster</h1>
+  <%= simple_form_for @place do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :description %>
+  <%= f.input :price, collection: ["$", "$$", "$$$", "$$$$"] %>
+  <br/>
+  <%= f.submit 'Update', class: 'btn btn-primary' %>
+  <% end %>
 </div>
