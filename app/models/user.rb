@@ -4,9 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_one :firstname
-  has_one :lastname
-  has_one :username
 
   has_many :places
   has_many :comments

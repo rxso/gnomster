@@ -3,7 +3,7 @@
   <div class="col-xs-10">
     <h1><%= @place.name %></h1>
     <h4><%= @place.address %></h4>
-    <h5><%= @place.price %><%= @place.foodtype %></h5>
+    <h5><%= @place.price %>&nbsp &nbsp<%= @place.foodtype %></h5>
 
     <br/>
 
@@ -67,7 +67,7 @@
               -
               <% end %>
               <%= comment.message %>
-              <small><%= comment.user.email %></small>
+              <small><%= comment.user.username %></small>
             </blockquote>
           </div>
           <% end %>
