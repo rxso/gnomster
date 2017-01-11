@@ -5,7 +5,7 @@
   <%= f.input :address %>
   <%= f.input :description %>
   <%= f.input :price, collection: ["$", "$$", "$$$", "$$$$"] %>
-  <br/>
+  <%= f.input :foodtype, collection: ["Chinese", "Japanese", "Thai", "New American", "Fast Casual", "Fast Food", "Mexican", "Cajun", "Mediterranean", "French", "Barbecue", "Middle Eastern", "Eastern European", "Korean", "Nigerian", "Pub", "Chain"] %>
   <%= f.submit 'Update', class: 'btn btn-primary' %>
   <% end %>
 </div>

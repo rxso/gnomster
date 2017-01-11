@@ -1,17 +1,19 @@
 <div class="booyah-box col-xs-6 col-xs-offset-3">
 
   <h2>Account Sign In</h2>
-  <br  />
+  <br/>
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="form-inputs">
-      <%= f.input :email, required: false, autofocus: true %>
-      <%= f.input :password, required: false %>
-    </div>
+  <div class="form-inputs">
 
-    <div class="form-actions">
-      <%= f.submit 'Login', class: 'btn btn-primary' %>
-    </div>
-    <br />
+    <%= f.input :username, required: false, autofocus: true %>
+    <%= f.input :email, required: false, autofocus: true %>
+    <%= f.input :password, required: false %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit 'Login', class: 'btn btn-primary' %>
+  </div>
+  <br/>
   <% end %>
 
   <%= render "devise/shared/links" %>

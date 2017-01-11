@@ -4,6 +4,9 @@ class Place < ActiveRecord::Base
   has_many :photos
   has_many :captions
 
+  has_one :price
+  has_one :foodtype
+
 
   geocoded_by :address
   after_validation :geocode
