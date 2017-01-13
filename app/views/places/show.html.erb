@@ -73,7 +73,7 @@
               <p><%= comment.message %></p>
               <br/>
               <h6><%= comment.user.username %></h6>
-              <%= comment.user.avatar %>
+              <%= image_tag(comment.user.avatar.filename) %>
             </blockquote>
           </div>
           <% end %>
