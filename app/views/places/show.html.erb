@@ -1,9 +1,7 @@
 <!-- Place Heading -->
 <div class="booyah-box col-xs-6 col-xs-offset-3">
   <div class="col-xs-10">
-    <% @place.user do |avatar| %>
-    <%= image_tag (user.avatar_url) %>
-    <% end %>
+
     <h1><%= @place.name %></h1>
     <h4><%= @place.address %></h4>
     <h5><%= @place.price %>&nbsp &nbsp<%= @place.foodtype %></h5>
@@ -73,9 +71,11 @@
               <p><%= comment.message %></p>
               <br/>
               <h6><%= comment.user.username %></h6>
-              <%= display_avatar(comment.user) %>
 
             </blockquote>
+            <div id="avatar">
+              <%= display_avatar(comment.user) %>
+            </div>
           </div>
           <% end %>
         </div>

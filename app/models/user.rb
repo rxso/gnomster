@@ -11,9 +11,11 @@ class User < ActiveRecord::Base
  validates_processing_of :avatar
 
  private
+
  def avatar_size_validation
    errors[:avatar] << "should be less than 500KB" if avatar.size > 0.5.megabytes
  end
+
   has_many :places
   has_many :comments
   has_many :photos
