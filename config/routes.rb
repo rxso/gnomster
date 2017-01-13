@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'avatars/new'
+
   devise_for :users
   root 'places#index'
   resources :places do

@@ -1,6 +1,9 @@
 <!-- Place Heading -->
 <div class="booyah-box col-xs-6 col-xs-offset-3">
   <div class="col-xs-10">
+    <% @place.user do |avatar| %>
+    <%= image_tag (user.avatar_url) %>
+    <% end %>
     <h1><%= @place.name %></h1>
     <h4><%= @place.address %></h4>
     <h5><%= @place.price %>&nbsp &nbsp<%= @place.foodtype %></h5>
@@ -26,9 +29,10 @@
       <div class="card-image"></div>
       <div class="card-content">
         <% @place.photos.each do |photo| %>
-        <%= image_tag photo.picture, class: "thumbnail col-xs-4 img-responsive" %>
+        <%= image_tag photo.picture, class: "page-thumbnail col-xs-4 img-responsive" %>
         <%= photo.caption %>
         <% end %>
+        <br/>
         <h1>Description</h1>
         <br/>
         <p><%= @place.description %></p>
@@ -60,14 +64,16 @@
         <h1 class="pull-left">Reviews</h1>
         <div class="comment-color">
           <% @place.comments.each do |comment| %>
-          <div class="col-xs-12">
+          <div class="text-left col-xs-12">
             <blockquote>
               <% if comment.ux_interface_rating.present? %>
               <b><%= comment.ux_interface_rating %></b>
-              -
+              <br/>
               <% end %>
-              <%= comment.message %>
-              <small><%= comment.user.username %></small>
+              <p><%= comment.message %></p>
+              <br/>
+              <h6><%= comment.user.username %></h6>
+              <%= comment.user.avatar %>
             </blockquote>
           </div>
           <% end %>

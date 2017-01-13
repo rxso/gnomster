@@ -3,37 +3,41 @@
   <div class="card">
     <div class="card-content">
       <% if place.photos.last && place.photos.last.picture.present? %>
-      <%= image_tag place.photos.last.picture, :class => "thumbnail center" %>
+      <%= image_tag place.photos.last.picture, :class => "index-thumbnail center" %>
       <% end %>
       <br/>
       <div class="clear"></div>
 
-      <div class="text-center">
-        <h1><%= link_to place.name, place_path(place), :class =>"title center" %></h1>
-        <h4><%= place.address %></h5>
-        <h5><%= place.price %></h5><br/>
-      </br?>
       <div class="text-left">
-        <p><%= place.description %></p><br/>
+        <h1><%= link_to place.name, place_path(place), :class =>"title pull-left" %></h1>
+        <div class="clear"></div>
+
+        <h4><%= place.address %></h5>
+        <h5><%= place.price %>&nbsp &nbsp
+          <%= place.foodtype %></h5>
+        <br/>
+
+        <div class="text-left">
+          <p><%= place.description %></p><br/>
+        </div>
+
       </div>
 
-    </div>
-
-    <!-- <% if place.user.present? %>
+      <!-- <% if place.user.present? %>
       <small><%= place.user.email %></small>
       <% end %> -->
 
-    <% if place.comments.present? %>
-
-    <blockquote>
-      <% if place.comments.last.ux_interface_rating.present? %>
-      <b><%= place.comments.last.ux_interface_rating %></b>
-      <% end %>
-      <small></small><%= place.comments.last.message %></small>
-    <small><%= place.comments.last.user.email %></small>
-  </blockquote>
-</div>
-<% end %>
+      <% if place.comments.present? %>
+      <blockquote>
+        <% if place.comments.last.ux_interface_rating.present? %>
+        <b><%= place.comments.last.ux_interface_rating %></b>
+        <% end %>
+        <p></small><%= place.comments.last.message %></p>
+      <br/>
+      <h6><%= place.comments.last.user.username %></h6>
+    </blockquote>
+  </div>
+  <% end %>
 </div>
 </div>
 

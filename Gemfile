@@ -11,6 +11,9 @@ gem 'simple_form'
 #add hamburger menu animation
 gem 'hamburgers'
 
+#add different image sizes
+gem 'mini_magick'
+
 #add photo tools
 gem 'carrierwave', '~> 1.0'
 
