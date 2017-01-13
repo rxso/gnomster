@@ -3,7 +3,7 @@ module AvatarsHelper
     unless user.avatar.nil?
       image_tag(user.avatar.filename)
     else
-      image_tag("fallback/default.png")
+      image_tag("default.png")
      end
   end
 end

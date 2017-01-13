@@ -4,6 +4,7 @@
 @import url( 'https://fonts.googleapis.com/css?family=Alegreya+Sans+SC');
 @import url( 'https://fonts.googleapis.com/css?family=Bitter');
 @import url( 'https://fonts.googleapis.com/css?family=Fredoka+One');
+@import url( 'https://fonts.googleapis.com/css?family=Unica+One');
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -54,26 +55,29 @@ h6 {
 }
 
 h1 {
-  font-family: "Passion One", "Helvetica", "san-serif";
+  font-family: "Unica One", "Helvetica", "san-serif";
   color: #ff0065;
+  text-transform: uppercase;
 }
 
 h3 {
-  font-family: "Bitter", "Helvetica", "san-serif";
+  font-family: "Unica One", "Helvetica", "san-serif";
   color: #044c65;
 }
 
 h5 {
-  font-family: "Fredoka One", "Arial", "san-serif";
+  font-family: "Unica One", "Arial", "san-serif";
   color: #5cb954;
   line-spacing: 1px;
   margin-top: 4px;
+  text-transform: uppercase;
 }
 
 h4 {
-  font-family: "Fredoka One", "Arial", "san-serif";
+  font-family: "Unica One", "Arial", "san-serif";
   color: #FFCC11;
   text-decoration: bold;
+  text-transform: uppercase;
 }
 
 h6 {

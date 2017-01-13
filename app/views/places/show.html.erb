@@ -70,12 +70,12 @@
               <% end %>
               <p><%= comment.message %></p>
               <br/>
-              <h6><%= comment.user.username %></h6>
+              <h6><%= comment.user.username%></h6>
 
             </blockquote>
-            <div id="avatar">
-              <%= display_avatar(comment.user) %>
-            </div>
+
+            <%= image_tag(display_avatar(comment.user)) %>
+
           </div>
           <% end %>
         </div>
