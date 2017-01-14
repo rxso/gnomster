@@ -1,16 +1,21 @@
 class Comment < ActiveRecord::Base
   belongs_to :user
   belongs_to :place
+  after_create :send_comment_email
 
   RATINGS = {
-     '1 Star' => '*',
-     '2 Star' => '* *',
-     '3 Star' => '* * *',
-     '4 Star' => '* * * *',
-     '5 Star' => '* * * * *'
+     '*' => '1_star',
+     '* *' => '2_stars',
+     '* * *' => '3_stars',
+     '* * * *' => '4_stars',
+     '* * * * *' => '5_stars',
   }
 
   def ux_interface_rating
     RATINGS.invert[self.rating]
+  end
+
+  def send_comment_email
+    NotificationMailer.comment_added(self).deliver
   end
 end

@@ -1,7 +1,7 @@
 @import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css");
 @import url( 'https://fonts.googleapis.com/css?family=Passion+One');
 @import url( 'https://fonts.googleapis.com/css?family=Varela+Round');
-@import url( 'https://fonts.googleapis.com/css?family=Alegreya+Sans+SC');
+@import url( 'https://fonts.googleapis.com/css?family=Roboto');
 @import url( 'https://fonts.googleapis.com/css?family=Bitter');
 @import url( 'https://fonts.googleapis.com/css?family=Fredoka+One');
 @import url( 'https://fonts.googleapis.com/css?family=Unica+One');
@@ -57,6 +57,7 @@ h6 {
 h1 {
   font-family: "Unica One", "Helvetica", "san-serif";
   color: #ff0065;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -65,18 +66,19 @@ h3 {
   color: #044c65;
 }
 
+h4 {
+  font-family: "Unica One", "Arial", "san-serif";
+  color: #FFCC11;
+  text-decoration: bold;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 h5 {
   font-family: "Unica One", "Arial", "san-serif";
   color: #5cb954;
   line-spacing: 1px;
   margin-top: 4px;
-  text-transform: uppercase;
-}
-
-h4 {
-  font-family: "Unica One", "Arial", "san-serif";
-  color: #FFCC11;
-  text-decoration: bold;
   text-transform: uppercase;
 }
 
@@ -88,7 +90,7 @@ h6 {
 }
 
 p {
-  font-family: "Bitter", "Georgia", "serif";
+  font-family: "Roboto", "Georgia", "serif";
   color: #044c65;
 }
 
