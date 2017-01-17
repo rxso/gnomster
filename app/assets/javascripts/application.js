@@ -15,16 +15,17 @@
 //= require jquery_ujs
 //= require_tree .
 
+
 jQuery(function($) {
-  $('button.hamburger').click(function() {
-    $(this).toggleClass('is-active');
-  });
+    $('button.hamburger').click(function() {
+        $(this).toggleClass('is-active');
+    });
 });
 
-bootcards.init( {
-  offCanvasBackdrop : true,
-  offCanvasHideOnMainClick : true,
-  enableTabletPortraitMode : true,
-  disableRubberBanding : true,
-  disableBreakoutSelector : 'a.no-break-out'
+bootcards.init({
+    offCanvasBackdrop: true,
+    offCanvasHideOnMainClick: true,
+    enableTabletPortraitMode: true,
+    disableRubberBanding: true,
+    disableBreakoutSelector: 'a.no-break-out'
 });
