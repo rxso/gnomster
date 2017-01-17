@@ -1,6 +1,6 @@
 @import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css");
-@import url( 'https://fonts.googleapis.com/css?family=Varela+Round');
 @import url( 'https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+@import url( 'https://fonts.googleapis.com/css?family=Shrikhand');
 @import url( 'https://fonts.googleapis.com/css?family=Rubik');
 @import url( 'https://fonts.googleapis.com/css?family=Bitter');
 @import url( 'https://fonts.googleapis.com/css?family=Unica+One');
@@ -196,60 +196,6 @@ p {
   padding: 8px;
 }
 
-.navbar.navbar-inverse {
-  //background:url('/assets/triad.png');
-  background-color: #ff0065;
-  border-radius: 0;
-  border: none;
-}
-
-.navbar-inverse .navbar-brand {
-  color: #FFCC11;
-  font-family: "Alfa Slab One";
-}
-
-.navbar-inverse .navbar-nav > li > a {
-  color: #FFCC11 !important;
-}
-
-.navbar-inverse .navbar-nav > li > a:hover {
-  color: #ffea9f !important;
-}
-
-.navbar-link {
-  color: #ffea9f;
-}
-
-.nav.navbar-nav.navbar-right {
-  color: #FFCC11;
-}
-
-.navbar-brand {
-  font-size: 30px;
-}
-
-.navbar-collapse {
-  border: none !important;
-}
-
-#map {
-  height: 300px;
-}
-
-.pages a {
-  color: #ff0065;
-  text-decoration: none;
-}
-
-.title {
-  color: #ff0065;
-
-  &:hover {
-    color: #ffcc11;
-    text-decoration: none;
-  }
-}
-
 .index-thumbnail {
   background: transparent;
   border: 0 none;
@@ -390,4 +336,77 @@ p {
 .card .card-action .label {
   padding: 10px;
   margin: -5px;
+}
+
+.carousel-caption {
+  font-family: "Shrikhand", Helvetica, sans-serif;
+  font-size: 48px;
+  color: #FFCC11;
+  text-shadow: rgba(0,0,0,0.95) 2px 2px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.carousel-inner > .item > a > img,
+.carousel-inner > .item > img {
+  display: block;
+  width: 100%;
+  height: 550px;
+  line-height: 1;
+}
+
+.navbar.navbar-inverse {
+  //background:url('/assets/triad.png');
+  background-color: #ff0065;
+  border-radius: 0;
+  border: none;
+  margin-bottom: 0;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #FFCC11;
+  font-family: "Alfa Slab One";
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #FFCC11 !important;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #ffea9f !important;
+}
+
+.navbar-link {
+  color: #ffea9f;
+}
+
+.nav.navbar-nav.navbar-right {
+  color: #FFCC11;
+}
+
+.navbar-brand {
+  font-size: 30px;
+}
+
+.navbar-collapse {
+  border: none !important;
+}
+
+#map {
+  height: 300px;
+}
+
+.pages a {
+  color: #ff0065;
+  text-decoration: none;
+}
+
+.title {
+  color: #ff0065;
+
+  &:hover {
+    color: #ffcc11;
+    text-decoration: none;
+  }
 }
