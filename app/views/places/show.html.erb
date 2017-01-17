@@ -74,9 +74,9 @@
 
             </blockquote>
             <div id="star-rating">
-              <% if not place.no_of_stars.blank? %>
+              <% if not @place.no_of_stars.blank? %>
               <div id="star-rating">
-                <% if place.no_of_stars.blank? %>
+                <% if @place.no_of_stars.blank? %>
                 <%= link_to 'Please add a Review',{ controller: 'reviews', action: 'new', id: place.id } %>
               <% else %>
                 Star rating:
@@ -146,5 +146,4 @@
       </div>
     </div>
   </div>
-
-</div>
+  <% end %>

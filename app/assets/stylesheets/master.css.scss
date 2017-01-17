@@ -1,5 +1,6 @@
 @import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css");
 @import url( 'https://fonts.googleapis.com/css?family=Varela+Round');
+@import url( 'https://fonts.googleapis.com/css?family=Alfa+Slab+One');
 @import url( 'https://fonts.googleapis.com/css?family=Rubik');
 @import url( 'https://fonts.googleapis.com/css?family=Bitter');
 @import url( 'https://fonts.googleapis.com/css?family=Unica+One');
@@ -52,10 +53,10 @@ h6 {
   padding: 0;
 }
 
-h1 {
-  font-family: "Unica One", "Helvetica", "san-serif";
+h2 {
+  font-family: "Alfa Slab One", "Helvetica", "san-serif";
   color: #ff0065;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -204,7 +205,7 @@ p {
 
 .navbar-inverse .navbar-brand {
   color: #FFCC11;
-  font-family: "Fredoka One";
+  font-family: "Alfa Slab One";
 }
 
 .navbar-inverse .navbar-nav > li > a {
