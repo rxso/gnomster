@@ -24,13 +24,14 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
             <li><%= link_to new_place_path, class: 'navbar-link' do %>
-              <i class="glyphicon glyphicon-plus-sign"><br/></i>New Place
+              <i class="glyphicon glyphicon-plus-sign"></i>New Place
               <% end %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <% if user_signed_in? %>
-            <%= "Welcome #{@user}!" %>
 
+            <%= "Welcome Back!" %>
+            <li><%= link_to "Profile", user_path(current_user) %></li>
             <br/>
             <i class="glyphicon glyphicon-user"></i>
             <li><%= link_to "Sign Out", destroy_user_session_path, class: "dropdown", method: :delete %></li>
