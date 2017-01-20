@@ -1,1 +1,35 @@
-<h1>USer Dashboard</h1>
+<div class="col-xs-6 col-xs-offset-3">
+  <div class="card">
+    <div class="card-content">
+      <div class="col-xs-4">
+        <div class="thumbnail-img">
+          <%= image_tag "user.png" %>
+        </div>
+      </div>
+
+      <h1><%= @user.username %></h1>
+      <h3>Member since:
+        <%= @user.created_at.strftime("%B %Y") %></h3>
+      <h4>
+        <%= @user.comments.count %>
+        comments</h4>
+      <h4>
+        <%= @user.comments.where(rating: "* * * * *").count %>
+        5 Star Reviews</h4>
+
+      <div class="clear"></div>
+      <br/>
+      <h2 class="text-left">Comments</h2>
+      <% @user.comments.each do |comment| %>
+
+      <blockquote>
+        <% if comment.ux_interface_rating.present? %>
+        <b><%= comment.ux_interface_rating %></b>
+        -
+        <% end %>
+        <%= comment.message %>
+      </blockquote>
+
+      <% end %>
+    </div>
+  </div>
