@@ -7,21 +7,23 @@
         </div>
       </div>
 
-      <h1><%= @user.username %></h1>
-      <h3>Member since:
-        <%= @user.created_at.strftime("%B %Y") %></h3>
+      <h2><%= @user.username %></h2>
+      <h5>Joined
+        <%= @user.created_at.strftime("%B %Y") %></h5>
+      <br/>
       <h4>
         <%= @user.comments.count %>
         comments</h4>
       <h4>
-        <%= @user.comments.where(rating: "* * * * *").count %>
-        5 Star Reviews</h4>
+        <%= @user.places.count %>
+        Gnomsters</h4>
 
       <div class="clear"></div>
       <br/>
       <h2 class="text-left">Comments</h2>
+      <br/>
       <% @user.comments.each do |comment| %>
-
+      <h4 class="text-left"><%= link_to comment.place.name, place_path(comment.place) %></h4>
       <blockquote>
         <% if comment.ux_interface_rating.present? %>
         <b><%= comment.ux_interface_rating %></b>
@@ -31,5 +33,25 @@
       </blockquote>
 
       <% end %>
+
+      <div class="clear"></div>
+      <h2 class="text-left">Gnomsters</h2>
+      <br/>
+      <% @user.places.each do |place| %>
+      <h1><%= link_to place.name, place_path(place) %></h1>
+      <h4><%= place.address %></h4>
+      <p><%= place.description %></p>
+      <% if place.user.present? %>
+      <h6><%= place.user.username %></h6>
+      <br/>
+      <% end %>
+
+      <% if place.comments.present? %>
+
     </div>
+    <% end %>
+
+    <% end %>
+
   </div>
+</div>
