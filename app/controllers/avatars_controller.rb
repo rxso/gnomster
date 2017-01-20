@@ -9,7 +9,7 @@ class AvatarsController < ApplicationController
   private
 
   def avatar_params
-    params.require(:user).permit(:email, :first_name, :last_name, :username {avatars: []})
+    params.require(:user).permit(:email, :first_name, :last_name, :username, avatars: [])
   end
 
 
