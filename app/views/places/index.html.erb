@@ -38,46 +38,50 @@
   </a>
 </div>
 
-<%= @places.each do |place| %>
-<div class="col-xs-4 col-xs-offset-2">
-  <div class="card">
-    <div class="card-content">
-      <% if place.photos.last && place.photos.last.picture.present? %>
-      <%= image_tag place.photos.last.picture, :class => "img-responsive index-thumbnail center" %>
-      <% end %>
-      <br/>
-      <div class="clear"></div>
+<div class="row">
 
-      <div class="text-left">
-        <h2><%= link_to place.name, place_path(place), :class =>"title pull-left" %></h2>
+  <% @places.each do |place| %>
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="card">
+      <div class="card-content">
+        <% if place.photos.last && place.photos.last.picture.present? %>
+        <%= image_tag place.photos.last.picture, :class => "img-responsive index-thumbnail center" %>
+        <% end %>
+
+        <br/>
         <div class="clear"></div>
 
-        <h4><%= place.address %></h5>
-        <h5><%= place.price %>&nbsp &nbsp
-          <%= place.foodtype %></h5>
-        <br/>
-
         <div class="text-left">
-          <p><%= place.description %></p><br/>
+          <h2><%= link_to place.name, place_path(place), :class =>"title pull-left" %></h2>
+          <div class="clear"></div>
+
+          <h4><%= place.address %></h5>
+          <h5><%= place.price %>&nbsp &nbsp
+            <%= place.foodtype %></h5>
+          <br/>
+
+          <div class="text-left">
+            <p><%= place.description %></p><br/>
+          </div>
+
         </div>
 
-      </div>
-
-      <!-- <% if place.user.present? %>
+        <!-- <% if place.user.present? %>
       <small><%= place.user.email %></small>
       <% end %> -->
 
-      <% if place.comments.present? %>
-      <blockquote>
-        <% if place.comments.last.ux_interface_rating.present? %>
-        <b><%= place.comments.last.ux_interface_rating %></b>
-        <% end %>
-        <p></small><%= place.comments.last.message %></p>
-      <br/>
-      <h6><%= place.comments.last.user.username %></h6>
-    </blockquote>
+        <% if place.comments.present? %>
+        <blockquote>
+          <% if place.comments.last.ux_interface_rating.present? %>
+          <b><%= place.comments.last.ux_interface_rating %></b>
+          <% end %>
+          <p></small><%= place.comments.last.message %></p>
+        <br/>
+        <h6><%= place.comments.last.user.username %></h6>
+      </blockquote>
+    </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
 </div>
 
