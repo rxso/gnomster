@@ -8,6 +8,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+
     <nav class="navbar navbar-inverse" role="navigation">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -23,37 +24,48 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><%= link_to new_place_path, class: 'navbar-link' do %>
-              <i class="glyphicon glyphicon-plus-sign"></i>New Place
+            <li><%= link_to new_place_path, class: "btn btn-default navbar-btn" do %>
+              <h3><i class="glyphicon glyphicon-plus-sign"></i> &nbsp; Add</h3>
               <% end %>
+              <ul class="navbar-header">
+                <% if user_signed_in? %>
+                  <div class="col-xs-12">
+                    <h3><%= "Hello #{current_user.username}!" %></h3>
+                      <div class="icon-sm">
+                        <li><%= link_to image_tag(current_user.avatar.url), user_path(current_user) %></li>
+                      </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <br/>
+                <h3>
+                  <li><%= link_to "Sign Out", destroy_user_session_path, class: "dropdown", method: :delete %></li>
+                </h3>
+              <% else %>
+              <div class="btn-group pull-left">
+                <h3><li><%= link_to "Sign In", new_user_session_path, class: "btn btn-default navbar-btn" %></li></h3>
+                <h3><li><%= link_to "Register", new_user_registration_path, class: "btn btn-default navbar-btn" %></li></h3>
+              </div>
+
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <% if user_signed_in? %>
 
-            <%= "Welcome Back #{current_user.username}!" %>
-            <%= image_tag(current_user.avatar.url) %>
-
-            <li><%= link_to "Profile", user_path(current_user) %></li>
-            <br/>
-            <li><%= link_to "Sign Out", destroy_user_session_path, class: "dropdown", method: :delete %></li>
-          <% else %>
-            <li><%= link_to "Sign In", new_user_session_path, class: "dropdown" %></li>
-            <li><%= link_to "Register", new_user_registration_path, class: "dropdown" %></li>
-            <% end %>
-
-          </ul>
+        <% end %>
         </div>
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container-fluid -->
-    </nav>
 
-    <% if notice.present? %>
-    <p class="alert alert-info"><%= notice %></p>
-    <% end %>
-    <% if alert.present? %>
-    <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
-    <%= yield %>
-  </body>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+
+<% if notice.present? %>
+<p class="alert alert-info"><%= notice %></p>
+<% end %>
+<% if alert.present? %>
+<p class="alert alert-danger"><%= alert %></p>
+<% end %>
+<%= yield %>
+</body>
 </html>

@@ -62,13 +62,13 @@ h1 {
 
 h2 {
   font-family: "Alfa Slab One", "Helvetica", "san-serif";
-  color: #ff0065;
+  color: #ff0065 !important;
   font-weight: 500;
   text-shadow: rgba(100,100,100,0.95) 1px 1px;
 }
 
 h3 {
-  font-family: "Unica One", "Helvetica", "san-serif";
+  font-family: "Fredoka One", "Helvetica", "san-serif";
   color: #044c65;
 }
 
@@ -345,15 +345,21 @@ p {
 
 .navbar.navbar-inverse {
   //background:url('/assets/triad.png');
-  background-color: #ff0065;
+  background-color: #0e2f44;
   border-radius: 0;
   border: none;
   margin-bottom: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .navbar-inverse .navbar-brand {
   color: #FFCC11;
   font-family: "Alfa Slab One";
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -372,6 +378,10 @@ p {
 .nav.navbar-nav.navbar-right {
   color: #FFCC11;
   font-family: "Bitter", "Helvetica", "san-serif";
+  text-align: right;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .navbar-brand {
@@ -380,6 +390,21 @@ p {
 
 .navbar-collapse {
   border: none !important;
+}
+
+.navbar-form .form-group input {
+  width: calc(100% - 50px);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.navbar-li {
+display:inline-block;
+white-space:nowrap;
+background-color:orange;
+font-family: "Fredoka One", "Arial", "San Serif"; 
+margin-right:100px;
+padding:20px 40px;
 }
 
 #map {
@@ -397,13 +422,32 @@ p {
   border-radius: 50%;
 }
 
-.thumbnail-img {
+.icon-lg {
   width: 100px;
   height: 100px;
 }
 
+.icon-md {
+  width: 70px;
+  height: 70px;
+}
+
+.icon-sm {
+  width: 40px;
+  height: 40px;
+}
+
+.icon-xs {
+  width: 20px;
+  height: 20px;
+}
+
 .text-center {
   text-align: center;
+}
+
+.image-center {
+  margin: auto;
 }
 
 .text-left {
@@ -422,4 +466,14 @@ p {
     color: #ffcc11;
     text-decoration: none;
   }
+}
+
+a:link,
+a:visited {
+  color: #ff0065;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffcc11;
 }

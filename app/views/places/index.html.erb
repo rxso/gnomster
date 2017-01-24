@@ -55,9 +55,9 @@
           <h2><%= link_to place.name, place_path(place), :class =>"title pull-left" %></h2>
           <div class="clear"></div>
 
-          <h4><%= place.address %></h5>
-          <h5><%= place.price %>&nbsp &nbsp
-            <%= place.foodtype %></h5>
+          <h4><%= place.address %></h4>
+          <h6><%= place.price %>&nbsp; &nbsp;
+            <%= place.foodtype %></h6>
           <br/>
 
           <div class="text-left">
@@ -67,8 +67,8 @@
         </div>
 
         <!-- <% if place.user.present? %>
-      <small><%= place.user.email %></small>
-      <% end %> -->
+          <small><%= place.user.email %></small>
+          <% end %> -->
 
         <% if place.comments.present? %>
         <blockquote>
@@ -77,19 +77,17 @@
           <% end %>
           <p></small><%= place.comments.last.message %></p>
         <br/>
-        <h6><%= place.comments.last.user.username %></h6>
+        <h6><%= place.comments.last.user.username %>
+        </h6>
+
       </blockquote>
+      <% end %>
     </div>
-    <% end %>
   </div>
 </div>
-</div>
-
-</div>
 <% end %>
+</div>
 
 <div class="pages col-xs-6 col-xs-offset-3">
 <%= will_paginate @places %>
-</div>
-
 </div>
