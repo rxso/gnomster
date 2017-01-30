@@ -5,6 +5,7 @@
 @import url( 'https://fonts.googleapis.com/css?family=Rubik');
 @import url( 'https://fonts.googleapis.com/css?family=Bitter');
 @import url( 'https://fonts.googleapis.com/css?family=Unica+One');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif');
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -55,7 +56,7 @@ h6 {
 }
 
 h1 {
-  font-family: "Unica One", "Helvetica", "san-serif";
+  font-family: "Bree Serif", "Helvetica", "san-serif";
   color: #ff0065;
   font-weight: 100;
 }
@@ -73,7 +74,7 @@ h3 {
 }
 
 h4 {
-  font-family: "Unica One", "Arial", "san-serif";
+  font-family: "Bree Serif", "Arial", "san-serif";
   color: #FFCC11;
   text-decoration: bold;
   text-transform: uppercase;
@@ -81,7 +82,7 @@ h4 {
 }
 
 h5 {
-  font-family: "Unica One", "Arial", "san-serif";
+  font-family: "Bree Serif", "Arial", "san-serif";
   color: #5cb954;
   line-spacing: 1px;
   margin-top: 4px;
@@ -402,7 +403,7 @@ p {
 display:inline-block;
 white-space:nowrap;
 background-color:orange;
-font-family: "Fredoka One", "Arial", "San Serif"; 
+font-family: "Fredoka One", "Arial", "San Serif";
 margin-right:100px;
 padding:20px 40px;
 }

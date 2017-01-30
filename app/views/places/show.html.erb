@@ -8,142 +8,141 @@
 
     <br/>
 
-    <button type="button" class="glyphicon glyphicon-camera cleanview" data-toggle="modal" data-target="#myPhotoModal"></button>
+      <button type="button" class="glyphicon glyphicon-camera cleanview" data-toggle="modal" data-target="#myPhotoModal"></button>
 
-    <!--Button Trigger Comment Modal -->
-    <button type="button" class="glyphicon glyphicon-comment cleanview" data-toggle="modal" data-target="#myCommentModal"></button>
+  <!--Button Trigger Comment Modal -->
+      <button type="button" class="glyphicon glyphicon-comment cleanview" data-toggle="modal" data-target="#myCommentModal"></button>
 
-    <!-- Edit Individual Place Links -->
+  <!-- Edit Individual Place Links -->
 
-    <% if current_user && current_user == @place.user %>
-    <%= link_to "", edit_place_path(@place), class: "glyphicon glyphicon-pencil" %>
-    <%= link_to "", place_path(@place), method: :delete, data: {confirm: "Warning: Delete This Gnomster Forever?"}, class: "glyphicon glyphicon-trash" %>
-    <% end %>
+      <% if current_user && current_user == @place.user %>
+      <%= link_to "", edit_place_path(@place), class: "glyphicon glyphicon-pencil" %>
+      <%= link_to "", place_path(@place), method: :delete, data: {confirm: "Warning: Delete This Gnomster Forever?"}, class: "glyphicon glyphicon-trash" %>
+      <% end %>
 
   </div>
+
   <div class="clear"></div>
+
   <div class="col-xs-12">
     <div class="card">
       <div class="card-image"></div>
-      <div class="card-content">
-        <% @place.photos.each do |photo| %>
-        <%= image_tag photo.picture, class: "page-thumbnail col-xs-4 img-responsive" %>
-        <%= photo.caption %>
-        <% end %>
-        <br/>
-        <h1>Description</h1>
-        <br/>
-        <p><%= @place.description %></p>
-        <br/>
+        <div class="card-content">
+          <% @place.photos.each do |photo| %>
+          <%= image_tag photo.picture, class: "page-thumbnail col-xs-4 img-responsive" %>
+          <%= photo.caption %>
+          <% end %>
+          <h1>Description</h1>
+          <br/>
+          <p><%= @place.description %></p>
+          <br/>
 
-        <h1>Map It!</h1>
-        <br/>
-        <% if @place.latitude.present? && @place.longitude.present? %>
-        <script>
+          <h1>Map It!</h1>
+
+          <br/>
+
+          <% if @place.latitude.present? && @place.longitude.present? %>
+
+          <script>
           function initMap() {
-            var myLatLng = {
-              lat: <%= @place.latitude %>,
-              lng: <%= @place.longitude %>
-            };
+          var myLatLng = {
+          lat: <%= @place.latitude %>,
+          lng: <%= @place.longitude %>
+          };
 
-            var map = new google.maps.Map(document.getElementById('map'), {
-              zoom: 16,
-              center: myLatLng
-            });
+          var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: myLatLng
+          });
 
-            var marker = new google.maps.Marker({position: myLatLng, map: map, title: 'Hello World!'});
+          var marker = new google.maps.Marker({position: myLatLng, map: map, title: 'Hello World!'});
           }
-        </script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjpAd6FYwsO6x9nsy14J9T9LVu5Inao98&callback=initMap"></script>
-        <div id="map"></div>
-        <% end %>
-        <br/>
-        <div class="clear"></div>
+          </script>
 
-        <h1 class="pull-left">Reviews</h1>
-        <br/>
-        <br/>
-        <div class="comment-color">
-          <% @place.comments.each do |comment| %>
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjpAd6FYwsO6x9nsy14J9T9LVu5Inao98&callback=initMap"></script>
+
+          <div id="map"></div>
+
+          <% end %>
+
+          <br/>
+
           <div class="clear"></div>
-          <div class="text-left col-xs-3">
-            <div class="icon-md">
-              <%= image_tag(current_user.avatar.url) %>
-            </div>
-          </div>
-          <div class="text-left col-xs-9">
 
-            <% if comment.ux_interface_rating.present? %>
-            <b><%= comment.ux_interface_rating %></b>
-            <br/>
-            <% end %>
-            <p><%= comment.message %></p>
-            <br/>
-            <h6><%= comment.user.username%>
-              &nbsp;
-              <%= comment.created_at.strftime("%D") %>
-            </h6>
+<!--Place Review Section -->
+</div>
+</div>
+<br />
+<h1 class="pull-left">Reviews</h1>
+<br/>
+<br/>
+<br/>
+<% @place.comments.each do |comment| %>
+<div class="clear"></div>
+  <div class="col-xs-10">
+    <br />
+    <% if comment.ux_interface_rating.present? %>
+      <p><%= comment.message %></p>
+    <b><%= comment.ux_interface_rating %></b>
+    <% end %>
+    <h6><%= comment.user.username%><h6><%= comment.created_at.strftime("%D") %></h6>
 
-          </div>
 
-        </div>
-        <% end %>
+  <% end %>
+  <br />
+<div class="clear"></div>
+<br />
+
+
       </div>
 
-    </div>
-    <div class="clear"></div>
+<div class="clear"></div>
 
     <!--Place Comment Box -->
 
-  </div>
+    </div>
+    </div>
 
-</div>
-<!-- Place Adress: Google Map Box -->
-<br/>
-<!--Button Trigger Photo Modal -->
-</div>
-<div class="clear"></div>
-
-<!-- Place Comment Modal -->
-<div class="modal fade" id="myCommentModal" tabindex="-1" role="dialog" aria-labelledby="myCommentModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-  <div class="modal-content">
+    <!-- Place Comment Modal -->
+    <div class="modal fade" id="myCommentModal" tabindex="-1" role="dialog" aria-labelledby="myCommentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
     <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-      <h4 class="modal-title" id="myCommentModalLabel">Review This Gnomster:</h4>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title" id="myCommentModalLabel">Review This Gnomster:</h4>
     </div>
     <%= simple_form_for @comment, url: place_comments_path(@place) do |f| %>
     <div class="modal-body">
-      <%= f.input :message %>
-      <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
+    <%= f.input :message %>
+    <%= f.input :rating, as: :select, collection: Comment::RATINGS %>
     </div>
     <div class="modal-footer">
-      <button class="btn btn-primary" data-dismiss="modal">Cancel</button>
-      <%= f.submit "Submit", class: "btn btn-primary" %>
+    <button class="btn btn-primary" data-dismiss="modal">Cancel</button>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
     </div>
     <% end %>
-  </div>
-</div>
-</div>
+    </div>
+    </div>
+    </div>
 
-<!-- Place Photo Modal -->
-<div class="modal fade" id="myPhotoModal" tabindex="-1" role="dialog" aria-labelledby="myPhotoModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-  <div class="modal-content">
+    <!-- Place Photo Modal -->
+    <div class="modal fade" id="myPhotoModal" tabindex="-1" role="dialog" aria-labelledby="myPhotoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
     <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-      <h4 class="modal-title" id="myPhotoModalLabel">Add a Photo:</h4>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h4 class="modal-title" id="myPhotoModalLabel">Add a Photo:</h4>
     </div>
     <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
     <div class="modal-body">
-      <%= f.input :picture %>
-      <%= f.input :caption %>
+    <%= f.input :picture %>
+    <%= f.input :caption %>
     </div>
     <div class="modal-footer">
-      <button class="btn btn-primary" data-dismiss="modal">Cancel</button>
-      <%= f.submit "Submit", class: "btn btn-primary" %>
+    <button class="btn btn-primary" data-dismiss="modal">Cancel</button>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
     </div>
     <% end %>
+    </div>
   </div>
-</div>
 </div>
