@@ -73,31 +73,26 @@
 </div>
 </div>
 <br />
-<h1 class="pull-left">Reviews</h1>
+<h1>Reviews</h1>
 <br/>
 <br/>
 <br/>
 <% @place.comments.each do |comment| %>
-<div class="clear"></div>
-  <div class="col-xs-10">
-    <br />
-    <% if comment.ux_interface_rating.present? %>
-      <p><%= comment.message %></p>
-    <b><%= comment.ux_interface_rating %></b>
-    <% end %>
-    <h6><%= comment.user.username%><h6><%= comment.created_at.strftime("%D") %></h6>
-
-
-  <% end %>
-  <br />
-<div class="clear"></div>
-<br />
-
-
-      </div>
-
-<div class="clear"></div>
-
+  <div class="media">
+    <div class="media-left">
+      <a href="#">
+        <%= image_tag comment.user.avatar.medium.url, class: "icon-sm" %>
+      </a>
+    </div>
+    <div class="media-body">
+      <% if comment.ux_interface_rating.present? %>
+        <p><%= comment.message %></p>
+      <b><%= comment.ux_interface_rating %></b>
+      <% end %>
+      <h6><%= comment.user.username%><h6><%= comment.created_at.strftime("%D") %></h6>
+    </div>
+  </div>
+<% end %>
     <!--Place Comment Box -->
 
     </div>

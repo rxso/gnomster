@@ -23,38 +23,24 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><%= link_to new_place_path, class: "btn btn-default navbar-btn" do %>
-              <h3><i class="glyphicon glyphicon-plus-sign"></i> &nbsp; Add</h3>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <%= link_to new_place_path do %>
+                <span class="glyphicon glyphicon-plus-sign"></span> &nbsp; Add
               <% end %>
-              <ul class="navbar-header">
-                <% if user_signed_in? %>
-                  <div class="col-xs-12">
-                    <h3><%= "Hello #{current_user.username}!" %></h3>
-                      <div class="icon-sm">
-                        <li><%= link_to image_tag(current_user.avatar.url), user_path(current_user) %></li>
-                      </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                <div class="clear"></div>
-                <br/>
-                <h3>
-                  <li><%= link_to "Sign Out", destroy_user_session_path, class: "dropdown", method: :delete %></li>
-                </h3>
-              <% else %>
-              <div class="btn-group pull-left">
-                <h3><li><%= link_to "Sign In", new_user_session_path, class: "btn btn-default navbar-btn" %></li></h3>
-                <h3><li><%= link_to "Register", new_user_registration_path, class: "btn btn-default navbar-btn" %></li></h3>
-              </div>
+            </li>
+            <% if user_signed_in? %>
+              <li><%= link_to image_tag(current_user.avatar.url, class: "icon-sm"), user_path(current_user) %></li>
+              <li><%= link_to "Hello #{current_user.username}!", user_path(current_user) %></li>
 
+              <li><%= link_to "Sign Out", destroy_user_session_path, class: "dropdown", method: :delete %></li>
+            <% else %>
+              <li><%= link_to "Sign In", new_user_session_path %></li>
+              <li><%= link_to "Register", new_user_registration_path %></li>
+            <% end %>
           </ul>
-
-        <% end %>
         </div>
-
-      </ul>
-    </div>
+      </div>
     <!-- /.navbar-collapse -->
   </div>
   <!-- /.container-fluid -->
